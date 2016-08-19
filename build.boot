@@ -1,15 +1,15 @@
 (set-env!
   :resource-paths #{"resources"}
   :dependencies '[[adzerk/bootlaces   "0.1.13" :scope "test"]
-                  [cljsjs/boot-cljsjs "0.5.1"  :scope "test"]
-                  [cljsjs/react       "15.1.0-0"]
-                  [cljsjs/react-dom   "15.1.0-0"]])
+                  [cljsjs/boot-cljsjs "0.5.2"  :scope "test"]
+                  [cljsjs/react       "15.3.0-0"]
+                  [cljsjs/react-dom   "15.3.0-0"]])
 
 (require
   '[adzerk.bootlaces :refer :all]
   '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +version+ "0.7.18-0")
+(def +version+ "0.7.20-0")
 (bootlaces! +version+)
 
 (task-options!
@@ -21,8 +21,8 @@
        :license     {"MIT" "http://opensource.org/licenses/MIT"}})
 
 (deftask *download []
-  (download :url      "https://github.com/orgsync/react-list/archive/0.7.18.zip"
-            :checksum "ECEC3A1412E8650B43359B62F01874D3"
+  (download :url      "https://github.com/orgsync/react-list/archive/0.7.20.zip"
+            :checksum "A2228D75D49D9CB314DCC556ECF49D6C"
             :unzip    true))
 
 (deftask package []

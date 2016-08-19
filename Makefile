@@ -1,0 +1,2 @@
+default:
+	boot clojars
