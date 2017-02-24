@@ -9,7 +9,7 @@
   '[adzerk.bootlaces :refer :all]
   '[cljsjs.boot-cljsjs.packaging :refer :all])
 
-(def +version+ "0.7.20-0")
+(def +version+ "0.8.3-0")
 (bootlaces! +version+)
 
 (task-options!
@@ -21,8 +21,8 @@
        :license     {"MIT" "http://opensource.org/licenses/MIT"}})
 
 (deftask *download []
-  (download :url      "https://github.com/orgsync/react-list/archive/0.7.20.zip"
-            :checksum "A2228D75D49D9CB314DCC556ECF49D6C"
+  (download :url      "https://github.com/orgsync/react-list/archive/0.8.3.zip"
+            :checksum "3ADA146E7DDE39D26441E60FB9947D3B"
             :unzip    true))
 
 (deftask package []
