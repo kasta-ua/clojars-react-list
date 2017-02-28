@@ -2,7 +2,7 @@
 
 [](dependency)
 ```clojure
-[ua.modnakasta/react-list "0.8.3-0"] ;; latest release
+[ua.modnakasta/react-list "0.8.3-1"] ;; latest release
 ```
 [](/dependency)
 
