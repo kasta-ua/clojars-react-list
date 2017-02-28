@@ -12,7 +12,7 @@
 
 
 (def +lib-version+ "0.8.3")
-(def +version+ (str +lib-version+ "-1"))
+(def +version+ (str +lib-version+ "-2"))
 
 
 (bootlaces! +version+)
@@ -43,11 +43,14 @@
     (sift :include #{#"^mk"})
 
     (deps-cljs :name "mk.react-list"
-               :requires ["cljsjs.react"])))
+               :requires ["cljsjs.react"])
+
+    (pom)
+
+    (jar)))
 
 
 (deftask clojars []
   (comp
     (package)
-    (build-jar)
     (push-release)))
