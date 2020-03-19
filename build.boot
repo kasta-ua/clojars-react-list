@@ -11,7 +11,7 @@
   '[cljsjs.boot-cljsjs.packaging :refer :all])
 
 
-(def +lib-version+ "0.8.13")
+(def +lib-version+ "0.8.11")
 (def +version+ (str +lib-version+ "-1"))
 
 
@@ -30,7 +30,7 @@
 (deftask package []
   (comp
     (download :url      (format "https://github.com/orgsync/react-list/archive/%s.zip" +lib-version+)
-              :checksum "BBB25EA9B6D515EC900625AFE1E2C753"
+              :checksum "2520790B88291B1884F88A77EB71A1D9"
               :unzip    true)
 
     (sift :move {#"^react-list-.*/react-list.js"
