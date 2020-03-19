@@ -11,26 +11,26 @@
   '[cljsjs.boot-cljsjs.packaging :refer :all])
 
 
-(def +lib-version+ "0.8.3")
-(def +version+ (str +lib-version+ "-2"))
+(def +lib-version+ "0.8.13")
+(def +version+ (str +lib-version+ "-1"))
 
 
 (bootlaces! +version+)
 
 
 (task-options!
-  pom {:project     'ua.modnakasta/react-list
+  pom {:project     'ua.kasta/react-list
        :version     +version+
        :description "A versatile infinite scroll React component."
        :url         "https://github.com/orgsync/react-list"
-       :scm         {:url "https://github.com/modnakasta/clojars-react-list"}
+       :scm         {:url "https://github.com/kasta-ua/clojars-react-list"}
        :license     {"MIT" "http://opensource.org/licenses/MIT"}})
 
 
 (deftask package []
   (comp
     (download :url      (format "https://github.com/orgsync/react-list/archive/%s.zip" +lib-version+)
-              :checksum "3ADA146E7DDE39D26441E60FB9947D3B"
+              :checksum "BBB25EA9B6D515EC900625AFE1E2C753"
               :unzip    true)
 
     (sift :move {#"^react-list-.*/react-list.js"
